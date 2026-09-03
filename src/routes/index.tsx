@@ -1,24 +1,54 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import { Preloader } from "@/components/portfolio/Preloader";
+import { Navbar } from "@/components/portfolio/Navbar";
+import { Hero } from "@/components/portfolio/Hero";
+import { About } from "@/components/portfolio/About";
+import { Process } from "@/components/portfolio/Process";
+import { Projects } from "@/components/portfolio/Projects";
+import { Footer } from "@/components/portfolio/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Leeshark — Full Stack Developer Portfolio" },
+      {
+        name: "description",
+        content:
+          "Leeshark is a full stack developer building modern, scalable web applications with React, Next.js, Node.js, Tailwind CSS, and MongoDB.",
+      },
+      { property: "og:title", content: "Leeshark — Full Stack Developer Portfolio" },
+      {
+        property: "og:description",
+        content:
+          "Modern web applications and digital experiences built with React, Node.js, Tailwind CSS, and MongoDB.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 2300);
+    return () => clearTimeout(t);
+  }, []);
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="bg-black font-display">
+      <Preloader show={loading} />
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Process />
+        <Projects />
+      </main>
+      <Footer />
     </div>
   );
 }
