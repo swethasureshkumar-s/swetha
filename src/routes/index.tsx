@@ -11,13 +11,13 @@ import { Footer } from "@/components/portfolio/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Leeshark — Full Stack Developer Portfolio" },
+      { title: "Swetha — Full Stack Developer Portfolio" },
       {
         name: "description",
         content:
-          "Leeshark is a full stack developer building modern, scalable web applications with React, Next.js, Node.js, Tailwind CSS, and MongoDB.",
+          "Swetha is a full stack developer building modern, scalable web applications with React, Next.js, Node.js, Tailwind CSS, and MongoDB.",
       },
-      { property: "og:title", content: "Leeshark — Full Stack Developer Portfolio" },
+      { property: "og:title", content: "Swetha — Full Stack Developer Portfolio" },
       {
         property: "og:description",
         content:

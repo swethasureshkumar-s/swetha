@@ -37,7 +37,7 @@ export function About() {
               <div className="mx-auto mb-4 h-3 w-12 rounded-full bg-neutral-600" />
               <img
                 src={profile}
-                alt="Portrait of Leeshark, full stack developer"
+                alt="Portrait of Swetha, full stack developer"
                 loading="lazy"
                 width={1024}
                 height={1024}
@@ -45,7 +45,7 @@ export function About() {
               />
               <div className="mt-4 text-center">
                 <p className="font-display text-lg font-bold uppercase tracking-wide text-white">
-                  Leeshark
+                  Swetha
                 </p>
                 <p className="font-mono-alt mt-1 text-[10px] uppercase tracking-[0.3em] text-white/50">
                   Full Stack Developer
@@ -66,7 +66,7 @@ export function About() {
             Hello!
           </h2>
           <p className="mt-8 text-lg leading-relaxed text-white">
-            I'm <span className="font-bold uppercase text-black">Leeshark</span>
+            I'm <span className="font-bold uppercase text-black">Swetha</span>
             , a Full Stack Developer passionate about creating modern web
             applications and digital experiences. I turn ideas into real
             products using HTML, CSS, JavaScript, React, Next.js, Tailwind CSS,

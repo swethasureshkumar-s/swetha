@@ -55,12 +55,12 @@ export function Footer() {
         transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
         className="my-20 text-center font-display text-[18vw] font-bold leading-none tracking-tighter text-[#D4D4D4] transition-colors duration-500 hover:text-white"
       >
-        leeshark
+        swetha
       </motion.h2>
 
       <div className="font-mono-alt mx-auto grid w-full max-w-6xl gap-6 text-[11px] uppercase tracking-[0.2em] text-white/50 md:grid-cols-3">
         <div className="space-y-2">
-          <p>© {year} Leeshark</p>
+          <p>© {year} Swetha</p>
           <p className="text-white/35">Built with React</p>
         </div>
         <div className="md:text-center">
