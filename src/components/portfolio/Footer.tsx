@@ -65,10 +65,10 @@ export function Footer() {
         </div>
         <div className="md:text-center">
           <a
-            href="mailto:hello@leeshark.dev"
+            href="mailto:hello@swetha.dev"
             className="underline underline-offset-8 transition-colors hover:text-white"
           >
-            hello@leeshark.dev
+            hello@swetha.dev
           </a>
         </div>
         <div className="md:text-right">
