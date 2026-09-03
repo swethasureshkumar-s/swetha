@@ -33,7 +33,7 @@ export function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6">
         <a href="#home" className="font-display text-2xl font-bold text-white">
-          Leeshark<span className="text-brand">.</span>
+          Swetha<span className="text-brand">.</span>
         </a>
 
         <ul className="hidden items-center gap-10 md:flex">

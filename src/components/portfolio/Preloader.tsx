@@ -15,7 +15,7 @@ export function Preloader({ show }: { show: boolean }) {
           <div className="relative select-none">
             {/* background layer */}
             <span className="font-display text-5xl font-bold tracking-tight text-black/30 md:text-8xl">
-              Leeshark.
+              Swetha.
             </span>
             {/* white fill layer */}
             <motion.span
@@ -25,7 +25,7 @@ export function Preloader({ show }: { show: boolean }) {
               transition={{ duration: 1.6, ease: [0.65, 0, 0.35, 1] }}
               exit={{ scale: 0.95, opacity: 0, transition: { duration: 0.4 } }}
             >
-              Leeshark.
+              Swetha.
             </motion.span>
           </div>
         </motion.div>
