@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Sparkle } from "lucide-react";
 import profile from "@/assets/profile.jpg";
 
