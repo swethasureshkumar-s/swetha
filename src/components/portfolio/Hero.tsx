@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ChevronDown, Pause, Play } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import reelAsset from "@/assets/reel.mp4.asset.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -13,19 +14,32 @@ const fadeUp = {
 
 export function Hero() {
   const [playing, setPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const togglePlay = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (playing) {
+      video.pause();
+    } else {
+      void video.play();
+    }
+    setPlaying(!playing);
+  };
 
   return (
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden bg-black">
-      {/* Video placeholder — intentionally blank, drop your reel video here later */}
-      <div
-        className="absolute inset-0 flex items-center justify-center bg-neutral-950"
-        aria-label="Video background placeholder"
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,oklch(0.2_0.02_260)_0%,oklch(0_0_0)_75%)]" />
-        <span className="font-mono-alt text-xs uppercase tracking-[0.5em] text-white/20">
-          Your reel plays here
-        </span>
-      </div>
+      {/* Reel video background */}
+      <video
+        ref={videoRef}
+        src={reelAsset.url}
+        className="absolute inset-0 h-full w-full object-cover"
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        aria-label="Showreel video"
+      />
       <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 px-6 pt-28 pb-20 md:grid-cols-[1.4fr_1fr]">
@@ -83,7 +97,7 @@ export function Hero() {
           className="hidden flex-col items-center gap-4 md:flex"
         >
           <button
-            onClick={() => setPlaying(!playing)}
+            onClick={togglePlay}
             aria-label={playing ? "Pause reel" : "Play reel"}
             className="glass group flex h-32 w-32 items-center justify-center rounded-full transition-all duration-500 hover:scale-110 hover:shadow-[0_0_60px_-8px] hover:shadow-brand lg:h-40 lg:w-40"
           >
