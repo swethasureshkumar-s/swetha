@@ -75,7 +75,7 @@ const skillCategories: { title: string; skills: Skill[] }[] = [
   },
 ];
 
-function SkillIcon({ def, className }: { def: IconDef; className?: string }) {
+function SkillIcon({ def, className = "" }: { def: IconDef; className?: string }) {
   if (def.type === "lucide") {
     const Comp = def.component;
     return <Comp className={className} />;
