@@ -28,7 +28,7 @@ export function Footer() {
 
         <div>
           <p className="font-display text-2xl font-bold text-[#F4F4F4]">
-            5+ Years of Experience
+            Building & Learning Every Day
           </p>
           <a
             href="#projects"
