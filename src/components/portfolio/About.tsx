@@ -1,8 +1,97 @@
 import { motion } from "motion/react";
-import { Sparkle } from "lucide-react";
+import { Sparkle, Code2, Globe, Palette, Sparkles } from "lucide-react";
+import {
+  siHtml5,
+  siCss,
+  siJavascript,
+  siAngular,
+  siReact,
+  siNodedotjs,
+  siExpress,
+  siMongodb,
+  siGithub,
+  siPostman,
+  siDocker,
+  siVercel,
+  siFigma,
+  siNotion,
+} from "simple-icons";
 import profile from "@/assets/profile.jpg";
 
-const techs = ["React", "Node.js", "MongoDB"];
+type SimpleIcon = (typeof siHtml5);
+type IconDef =
+  | { type: "simple"; icon: SimpleIcon }
+  | { type: "lucide"; component: React.ComponentType<{ className?: string }> };
+
+type Skill = { name: string; icon: IconDef };
+
+const skillCategories: { title: string; skills: Skill[] }[] = [
+  {
+    title: "Frontend",
+    skills: [
+      { name: "HTML5", icon: { type: "simple", icon: siHtml5 } },
+      { name: "CSS3", icon: { type: "simple", icon: siCss } },
+      { name: "JavaScript", icon: { type: "simple", icon: siJavascript } },
+      { name: "Angular", icon: { type: "simple", icon: siAngular } },
+      { name: "React Native", icon: { type: "simple", icon: siReact } },
+    ],
+  },
+  {
+    title: "Backend & APIs",
+    skills: [
+      { name: "Node.js", icon: { type: "simple", icon: siNodedotjs } },
+      { name: "Express.js", icon: { type: "simple", icon: siExpress } },
+      { name: "REST APIs", icon: { type: "lucide", component: Globe } },
+    ],
+  },
+  {
+    title: "Database",
+    skills: [{ name: "MongoDB", icon: { type: "simple", icon: siMongodb } }],
+  },
+  {
+    title: "Developer Tools & Deployment",
+    skills: [
+      { name: "GitHub", icon: { type: "simple", icon: siGithub } },
+      { name: "VS Code", icon: { type: "lucide", component: Code2 } },
+      { name: "Postman", icon: { type: "simple", icon: siPostman } },
+      { name: "Docker", icon: { type: "simple", icon: siDocker } },
+      { name: "Vercel", icon: { type: "simple", icon: siVercel } },
+    ],
+  },
+  {
+    title: "Design & Productivity",
+    skills: [
+      { name: "Figma", icon: { type: "simple", icon: siFigma } },
+      { name: "Canva", icon: { type: "lucide", component: Palette } },
+      { name: "Notion", icon: { type: "simple", icon: siNotion } },
+    ],
+  },
+  {
+    title: "AI-Powered Development",
+    skills: [
+      { name: "Antigravity", icon: { type: "lucide", component: Sparkles } },
+      { name: "AI-assisted web development", icon: { type: "lucide", component: Sparkles } },
+    ],
+  },
+];
+
+function SkillIcon({ def, className }: { def: IconDef; className?: string }) {
+  if (def.type === "lucide") {
+    const Comp = def.component;
+    return <Comp className={className} />;
+  }
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      role="img"
+      aria-label={def.icon.title}
+    >
+      <title>{def.icon.title}</title>
+      <path d={def.icon.path} fill="currentColor" />
+    </svg>
+  );
+}
 
 export function About() {
   return (
@@ -66,28 +155,54 @@ export function About() {
             Hello!
           </h2>
           <p className="mt-8 text-lg leading-relaxed text-white">
-            I'm <span className="font-bold uppercase text-black">Swetha</span>
-            , a Full Stack Developer passionate about creating modern web
-            applications and digital experiences. I turn ideas into real
-            products using HTML, CSS, JavaScript, React, Next.js, Tailwind CSS,
-            Node.js, and MongoDB.
+            I'm <span className="font-bold uppercase text-black">Swetha</span>,
+            a Full Stack Developer passionate about creating modern web and
+            mobile applications. I turn ideas into real products using HTML,
+            CSS, JavaScript, Angular, React Native, Node.js, Express, MongoDB,
+            and AI-powered development tools.
           </p>
           <p className="mt-5 leading-relaxed text-white/80">
             What started as curiosity grew into a passion for building clean,
             responsive, and user-friendly applications — from beautiful
-            interfaces to scalable backend systems.
+            interfaces to scalable backend systems. I love learning new
+            technologies, experimenting with real-world projects, and using tools
+            like Antigravity and AI assistants to design, explore, and build
+            faster.
           </p>
 
-          {/* tech logos */}
-          <div className="mt-12 flex items-center gap-10">
-            {techs.map((t, i) => (
-              <motion.span
-                key={t}
-                className="animate-float-y cursor-default rounded-2xl border-2 border-black/20 px-6 py-4 font-display text-xl font-bold text-black/70 drop-shadow-lg transition-all duration-300 hover:scale-110 hover:border-black hover:text-black"
-                style={{ animationDelay: `${i * 0.8}s` }}
+          {/* skill categories */}
+          <div className="mt-12 flex flex-wrap gap-10">
+            {skillCategories.map((cat, i) => (
+              <motion.div
+                key={cat.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{
+                  duration: 0.7,
+                  delay: i * 0.1,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="min-w-[260px] flex-1"
               >
-                {t}
-              </motion.span>
+                <h3 className="font-mono-alt text-[11px] uppercase tracking-[0.25em] text-black/60">
+                  {cat.title}
+                </h3>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {cat.skills.map((s, j) => (
+                    <span
+                      key={s.name}
+                      className="animate-float-y inline-flex items-center gap-2 rounded-2xl border-2 border-black/20 bg-white/5 px-4 py-2.5 font-display text-sm font-bold text-black/70 drop-shadow-lg transition-all duration-300 hover:scale-110 hover:border-black hover:text-black"
+                      style={{
+                        animationDelay: `${(i * 5 + j) * 0.4}s`,
+                      }}
+                    >
+                      <SkillIcon def={s.icon} className="h-4 w-4 shrink-0" />
+                      {s.name}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>
