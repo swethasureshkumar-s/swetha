@@ -16,7 +16,7 @@ import {
   siFigma,
   siNotion,
 } from "simple-icons";
-import profile from "@/assets/profile.jpg";
+import profile from "@/assets/swetha.png.asset.json";
 
 type SimpleIcon = (typeof siHtml5);
 type IconDef =
