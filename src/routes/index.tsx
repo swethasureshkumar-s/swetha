@@ -18,16 +18,17 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Swetha is a full stack developer building modern, scalable web applications with React, Next.js, Node.js, Tailwind CSS, and MongoDB.",
+          "Swetha is an aspiring full stack developer building modern web applications with Angular, React Native, Node.js, Express, and MongoDB — currently building Doofy, a pet care ecosystem.",
       },
       { property: "og:title", content: "Swetha — Full Stack Developer Portfolio" },
       {
         property: "og:description",
         content:
-          "Modern web applications and digital experiences built with React, Node.js, Tailwind CSS, and MongoDB.",
+          "Modern web and mobile applications built with Angular, React Native, Node.js, Express, and MongoDB, plus AI-powered development tools.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+
     ],
   }),
   component: Index,
