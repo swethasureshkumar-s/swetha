@@ -1,20 +1,18 @@
 import { motion } from "motion/react";
 
 const services = [
-  "Cinematic Production",
-  "Motion Graphics",
   "Web Development",
+  "Full Stack Development",
   "UI/UX Design",
+  "AI-Assisted Development",
 ];
 
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer
-      id="contact"
-      className="flex min-h-[50vh] flex-col justify-between bg-[oklch(0.17_0_0)] px-6 py-20"
-    >
+    <footer className="flex min-h-[50vh] flex-col justify-between bg-[oklch(0.17_0_0)] px-6 py-20">
+
       <div className="mx-auto grid w-full max-w-6xl gap-12 md:grid-cols-3">
         <div>
           <ul className="font-mono-alt space-y-3 text-[11px] uppercase tracking-[0.25em] text-white/60">
