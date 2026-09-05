@@ -125,13 +125,14 @@ export function About() {
             <div className="w-64 -rotate-3 rounded-2xl bg-neutral-800 p-4 shadow-2xl shadow-black/50 transition-transform duration-500 hover:rotate-0 hover:scale-105">
               <div className="mx-auto mb-4 h-3 w-12 rounded-full bg-neutral-600" />
               <img
-                src={profile}
+                src={profile.url}
                 alt="Portrait of Swetha, full stack developer"
                 loading="lazy"
                 width={1024}
                 height={1024}
                 className="aspect-square w-full rounded-xl object-cover"
               />
+
               <div className="mt-4 text-center">
                 <p className="font-display text-lg font-bold uppercase tracking-wide text-white">
                   Swetha
@@ -156,19 +157,20 @@ export function About() {
           </h2>
           <p className="mt-8 text-lg leading-relaxed text-white">
             I'm <span className="font-bold uppercase text-black">Swetha</span>,
-            a Full Stack Developer passionate about creating modern web and
-            mobile applications. I turn ideas into real products using HTML,
-            CSS, JavaScript, Angular, React Native, Node.js, Express, MongoDB,
-            and AI-powered development tools.
+            an aspiring Full Stack Developer at the start of my journey,
+            passionate about building modern web and mobile applications with
+            HTML, CSS, JavaScript, Angular, React Native, Node.js, Express, and
+            MongoDB.
           </p>
           <p className="mt-5 leading-relaxed text-white/80">
-            What started as curiosity grew into a passion for building clean,
-            responsive, and user-friendly applications — from beautiful
-            interfaces to scalable backend systems. I love learning new
-            technologies, experimenting with real-world projects, and using tools
-            like Antigravity and AI assistants to design, explore, and build
+            What started as curiosity grew into a daily practice of building
+            clean, responsive, user-friendly applications and learning by doing.
+            I focus on real projects, practical development skills, and constant
+            experimentation — and I use AI-powered development tools like
+            Antigravity and AI assistants to explore ideas, design, and build
             faster.
           </p>
+
 
           {/* skill categories */}
           <div className="mt-12 flex flex-wrap gap-10">
