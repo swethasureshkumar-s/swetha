@@ -51,7 +51,10 @@ function Index() {
         <About />
         <Process />
         <Projects />
+        <CurrentlyBuilding />
+        <Contact />
       </main>
+
       <Footer />
     </div>
   );
