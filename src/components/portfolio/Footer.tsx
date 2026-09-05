@@ -1,20 +1,18 @@
 import { motion } from "motion/react";
 
 const services = [
-  "Cinematic Production",
-  "Motion Graphics",
   "Web Development",
+  "Full Stack Development",
   "UI/UX Design",
+  "AI-Assisted Development",
 ];
 
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer
-      id="contact"
-      className="flex min-h-[50vh] flex-col justify-between bg-[oklch(0.17_0_0)] px-6 py-20"
-    >
+    <footer className="flex min-h-[50vh] flex-col justify-between bg-[oklch(0.17_0_0)] px-6 py-20">
+
       <div className="mx-auto grid w-full max-w-6xl gap-12 md:grid-cols-3">
         <div>
           <ul className="font-mono-alt space-y-3 text-[11px] uppercase tracking-[0.25em] text-white/60">
@@ -40,8 +38,9 @@ export function Footer() {
 
         <div className="md:text-right">
           <p className="font-mono-alt text-[11px] uppercase tracking-[0.25em] text-white/60">
-            Available Worldwide
+            Open to internships & collaborations
           </p>
+
           <p className="font-mono-alt mt-3 text-[11px] uppercase tracking-[0.25em] text-white/40">
             {year}
           </p>
@@ -65,10 +64,10 @@ export function Footer() {
         </div>
         <div className="md:text-center">
           <a
-            href="mailto:hello@swetha.dev"
+            href="mailto:swethasureshkumar56@gmail.com"
             className="underline underline-offset-8 transition-colors hover:text-white"
           >
-            hello@swetha.dev
+            swethasureshkumar56@gmail.com
           </a>
         </div>
         <div className="md:text-right">

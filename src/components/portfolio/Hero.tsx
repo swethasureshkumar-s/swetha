@@ -63,10 +63,12 @@ export function Hero() {
             animate="show"
             className="mt-8 max-w-xl text-base leading-relaxed text-white/70 md:text-lg"
           >
-            I craft modern web applications with React.js, Node.js, and
-            Tailwind CSS — turning ideas into fast, scalable, and beautifully
-            designed digital experiences.
+            I'm Swetha, an aspiring Full Stack Developer passionate about
+            creating modern web applications and digital experiences. I enjoy
+            turning ideas into real products and continuously learning new
+            technologies while building practical projects.
           </motion.p>
+
 
           <motion.div
             custom={2}
