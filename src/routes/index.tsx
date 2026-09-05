@@ -6,7 +6,10 @@ import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
 import { Process } from "@/components/portfolio/Process";
 import { Projects } from "@/components/portfolio/Projects";
+import { CurrentlyBuilding } from "@/components/portfolio/CurrentlyBuilding";
+import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
