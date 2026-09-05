@@ -38,8 +38,9 @@ export function Footer() {
 
         <div className="md:text-right">
           <p className="font-mono-alt text-[11px] uppercase tracking-[0.25em] text-white/60">
-            Available Worldwide
+            Open to internships & collaborations
           </p>
+
           <p className="font-mono-alt mt-3 text-[11px] uppercase tracking-[0.25em] text-white/40">
             {year}
           </p>
